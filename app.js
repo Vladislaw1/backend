@@ -1,11 +1,14 @@
 const express = require("express")
+const cors = require("cors")
 
 const app = express()
 
-app.use("/",()=>{
-    console.log("Start")
+app.use(cors())
+
+app.use("/", () => {
+    return (`<p>Hello World</p>`)
 })
 
-app.listen(4001,()=>{
+app.listen(4001, () => {
     console.log("start server")
 })
